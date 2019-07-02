@@ -45,17 +45,16 @@ resource "azurerm_virtual_machine_extension" "jenkins_terraform" {
 
   settings = <<SETTINGS
   {
-          "fileUris": ["https://raw.githubusercontent.com/xenonstack/terraform-jenkins-azure/master/jenkins-init.sh"],
-		  "commandToExecute": "sh jenkins-init.sh"
+          "fileUris": ["https://raw.githubusercontent.com/jaineshtrivedi/terraform/master/jenkins-init.sh"],
+          "commandToExecute": "sh jenkins-init.sh"
   }
 SETTINGS
 }
 
 terraform {
   backend "azurerm" {
-    storage_account_name = "jaineshkubediag"
-    container_name       = "bootdiagnostics-jaineshku-1e1cbfdc-2d97-4b56-bf4b-b2fdbac108e0"
+    storage_account_name = "terraformiacautobotstest"
+    container_name       = "test-infra-tfstate"
     key                  = "terraform.tfstate"
-    access_key           = "4EbwKHERZMFfzsf7jGJqps3pELMjCddYgBAu+v1rG4qmk5QowrXwNpXivrl2XfjQCenU2RiNZ6NTQBmoaaMmPQ=="
-	}
+    }
 }
