@@ -52,9 +52,10 @@ SETTINGS
 
 terraform {
   backend "azurerm" {
-    storage_account_name = "jaineshkubediag"
-    container_name       = "bootdiagnostics-jaineshku-1e1cbfdc-2d97-4b56-bf4b-b2fdbac108e0"
-    key                  = "terraform.tfstate"
+    storage_account_name = "terraformiacautobotstest"
+    container_name       = "test-infra-tfstate"
+    key                  = "test.terraform.tfstate"
+    resource_group_name  = "BASF_RG_SANDBOX_132"
     access_key           = "4EbwKHERZMFfzsf7jGJqps3pELMjCddYgBAu+v1rG4qmk5QowrXwNpXivrl2XfjQCenU2RiNZ6NTQBmoaaMmPQ=="
-	}
+   }
 }
