@@ -18,7 +18,6 @@ resource "azurerm_virtual_machine" "jenkins" {
 
   storage_os_disk {
     name          = "jenkins-osdisk"
-    vhd_uri       = "${azurerm_storage_account.jenkins_storage.primary_blob_endpoint}${azurerm_storage_container.jenkins_cont.name}/osdisk-1.vhd"
     caching       = "ReadWrite"
     create_option = "FromImage"
   }
